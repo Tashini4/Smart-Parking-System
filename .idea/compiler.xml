@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="CloudConfig" />
+        <module name="Eureka-Server" />
+        <module name="Parking-Service" />
+        <module name="Api-Gateway" />
+        <module name="User-Service" />
+      </profile>
+      <profile name="Annotation profile for payment-service" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar" />
+        </processorPath>
+        <module name="Payment-Service" />
+        <module name="Vehicle-Service" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Api-Gateway" options="-parameters" />
+      <module name="CloudConfig" options="-parameters" />
+      <module name="Eureka-Server" options="-parameters" />
+      <module name="Parking-Service" options="-parameters" />
+      <module name="Payment-Service" options="-parameters" />
+      <module name="User-Service" options="-parameters" />
+      <module name="Vehicle-Service" options="-parameters" />
+    </option>
+  </component>
+</project>
