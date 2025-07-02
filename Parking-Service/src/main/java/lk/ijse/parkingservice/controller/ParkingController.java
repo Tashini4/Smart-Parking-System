@@ -23,6 +23,7 @@ public class ParkingController {
         System.out.println("saveParkingPlace");
         try {
             int res = parkingService.saveParkingPlace(parkingDTO);
+            System.out.println("response code: " + res);
             switch(res){
                 case VarList.Created ->{
                     System.out.println("Create Parking Success");

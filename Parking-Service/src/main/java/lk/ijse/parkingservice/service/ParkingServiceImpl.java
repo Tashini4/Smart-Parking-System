@@ -34,9 +34,14 @@ public class ParkingServiceImpl implements ParkingService {
         System.out.println("saveParkingPlace");
         try{
             if(userRepository.existsUserByEmail(parkingDTO.getEmail().toLowerCase())){
+                System.out.println("saveParkingPlace----1");
                 if(parkingRepo.existsParkingByLocation(parkingDTO.getLocation())){
+                    System.out.println("saveParkingPlace-----2");
+
                     return VarList.All_Ready_Added;
                 }
+                System.out.println("saveParkingPlace-----3");
+
                 Parking parking = modelMapper.map(parkingDTO, Parking.class);
                 int code = Integer.parseInt(RandomNumberGenerator.generateCode(6));
                 parking.setLocationCode(code);

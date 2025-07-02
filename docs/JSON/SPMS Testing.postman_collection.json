@@ -1,0 +1,608 @@
+{
+  "info": {
+    "_postman_id": "57ac118b-ddfe-40de-8941-674a6a0452f9",
+    "name": "Smart Paking System Test Postman",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "40383106"
+  },
+  "item": [
+    {
+      "name": "User",
+      "item": [
+        {
+          "name": "user-save",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "\r\n  {\r\n    \"name\": \"Amali\",\r\n    \"email\": \"amali.driver5@example.com\",\r\n    \"password\": \"Tashini2000###\",\r\n    \"role\": \"DRIVER\"\r\n  }\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/users/saveUser",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "users",
+                "saveUser"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "user-update",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "\n  {\n    \"name\": \"IJSE\",\n    \"email\": \"amali.driver5@example.com\",\n    \"password\": \"Tashini2000###\",\n    \"role\": \"DRIVER\"\n  }"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/users/updateUser",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "users",
+                "updateUser"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "user-delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\"email\":\"amali.driver5@example.com\",\n\"password\":\"Tashini2000###\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/users/deleteUser",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "users",
+                "deleteUser"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get-user",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\"email\":\"kavindu.driver1@example.com\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/users/getUser",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "users",
+                "getUser"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get-all-users",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/users/getAllUser",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "users",
+                "getAllUser"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Vehicle",
+      "item": [
+        {
+          "name": "vehicle-save",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": " {\n    \"licensePlate\": \"PQR-6789\",\n    \"model\": \"Audi Q7 2021\",\n    \"email\": \"vishanchathuranga1234@gmail.com\"\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/vehicle/saveVehicle",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "vehicle",
+                "saveVehicle"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "vehicle-update",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": " {\n    \"licensePlate\": \"PQR-6789\",\n    \"model\": \"Audi Q88 2021\",\n    \"email\": \"vishanchathuranga1234@gmail.com\"\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/vehicle/updateVehicle",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "vehicle",
+                "updateVehicle"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "vehicle-delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": " {\n    \"licensePlate\": \"PQR-6789\",\n    \"email\": \"vishanchathuranga1234@gmail.com\"\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/vehicle/deleteVehicle",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "vehicle",
+                "deleteVehicle"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getVehicle-LicenPlateNumber",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"licensePlate\": \"SP-9012\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/vehicle/getVehicleByPlateNumber",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "vehicle",
+                "getVehicleByPlateNumber"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get-all-vehicle",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/vehicle/getAllVehicle",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "vehicle",
+                "getAllVehicle"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Parking Space",
+      "item": [
+        {
+          "name": "parkingSpace-save",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "  {\n    \"location\": \"903 Poplar Way\",\n    \"city\": \"Washington\",\n    \"available\": false,\n    \"email\": \"megan.carter@example.com\",\n    \"payAmount\": 2550\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/parking/saveParking",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "parking",
+                "saveParking"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "parkingSpace-update",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"id\":\"6d5c46d7-a9fb-4c7e-94d2-d881f5bb22fe\",\n    \"location\": \"903 pr way\",\n    \"locationCode\":859075,\n    \"city\": \"Washinton\",\n    \"available\": false,\n    \"email\": \"megan.carter@example.com\",\n    \"payAmount\": 2550\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/parking/updateParking",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "parking",
+                "updateParking"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "parkingSpace-delete",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"id\":\"6d5c46d7-a9fb-4c7e-94d2-d881f5bb22fe\",\n    \"locationCode\":859075,\n    \"email\": \"megan.carter@example.com\"\n  }"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/parking/deleteParking",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "parking",
+                "deleteParking"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAll-parkingSpace",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/parking/getAll",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "parking",
+                "getAll"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAllByCity-parkingSpace",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "  {\n    \"city\": \"atlanta\"\n\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/parking/getAllByCity",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "parking",
+                "getAllByCity"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "PaymentAndTrasaction",
+      "item": [
+        {
+          "name": "payment-save",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"licensePlate\":\"PQR-6789\",\n    \"userEmail\":\"vishanchathuranga1234@gmail.com\",\n    \"parkingLocation\":\"123 main street\"\n\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/payments/savePayment",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "payments",
+                "savePayment"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAll-payment",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/payment/getAll",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "payment",
+                "getAll"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAllByEmail-payment",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n   \"email\": \"amali.driver5@example.com\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/payment/getPaymentUseByEmail",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "payment",
+                "getPaymentUseByEmail"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8080",
+      "type": "string"
+    }
+  ]
+}
